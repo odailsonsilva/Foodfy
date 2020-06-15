@@ -20,8 +20,8 @@
     <section>
        <h2>Mais acessadas</h2>
        <div class="sect-content">
-        {% for dado in dados%}
-            <article>
+        {% for dado in dados %}
+            <article class="articles-index">
                 <img src="{{dado.image}}" alt="{{dado.title}}">
                 <p>{{dado.title}}</p>
                 <legend>{{dado.author}}</legend>

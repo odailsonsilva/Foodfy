@@ -20,6 +20,13 @@ server.get('/', function(req, res){
     return res.render('index', {dados})
 })
 
+server.get('/sobre', function(req, res){
+    return res.render('sobre')
+})
+
+server.get('/receitas', function(req, res){
+    return res.render('receitas', {dados})
+})
 
 // porta para o servidor
 server.listen(5000)

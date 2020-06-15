@@ -1,101 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Foodfy</title>
-    <link rel="stylesheet" href="./css/style2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body id="body-receitas">
-    <div class="container">
-    <header>
-        <a href="index.html"><h1>Foodfy</h1></a>
-        <nav class="menu-principal">
-            <ul>
-                <li id="sobre"><a href="sobre.html">Sobre</a></li>
-                <li><a href="receitas.html" id="receitas">Receitas</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends "layout.njk" %}
 
+{% block head %}
+    <title>Receitas - Foodfy</title>
+{% endblock %}
+
+{% block content %}
     <section>
-        <div class="sect-content">
-             <article id="burger.png">
-                 <img src="./assets/burger.png" alt="Triplo bacon burguer">
-                 <p>Triplo Bacon Burguer</p>
-                 <legend>por Jorge Relato</legend>
-             </article>
- 
-             <article id="pizza.png">
-                 <img src="./assets/pizza.png" alt="Pizza 4 estações">
-                 <p>Pizza 4 estações</p>
-                 <legend>por Fabiana Melo</legend>
-             </article id="burger.png">
- 
-             <article id="espaguete.png">
-                 <img src="./assets/espaguete.png" alt="Espaguete ao alho">
-                 <p>Espaguete ao alho</p>
-                 <legend>por Júlia Kinoto</legend>
-             </article>
- 
-             <article id="lasanha.png">
-                 <img src="./assets/lasanha.png" alt="Lasanha mac n' cheese">
-                 <p>Lasanha mac n' cheese</p>
-                 <legend>por Juliano Vieira</legend>
-             </article id="burger.png">
- 
-             <article id="doce.png">
-                 <img src="./assets/doce.png" alt="Docinhos pão-do-céu">
-                 <p>Docinhos pão-do-céu</p>
-                 <legend>por Ricardo Golvea</legend>
-             </article>
- 
-             <article id="asinhas.png">
-                 <img src="./assets/asinhas.png" alt="Asinhas de frango ao barbecue">
-                 <p>Asinhas de frango ao barbecue</p>
-                 <legend>por Vania Steroski</legend>
-             </article>
-             <article id="burger.png">
-                <img src="./assets/burger.png" alt="Triplo bacon burguer">
-                <p>Triplo Bacon Burguer</p>
-                <legend>por Jorge Relato</legend>
-            </article >
-
-            <article id="pizza.png">
-                <img src="./assets/pizza.png" alt="Pizza 4 estações">
-                <p>Pizza 4 estações</p>
-                <legend>por Fabiana Melo</legend>
+       <div class="sect-content">
+        {% for dado in dados %}
+            <article class="articles-index">
+                <img src="{{dado.image}}" alt="{{dado.title}}">
+                <p>{{dado.title}}</p>
+                <legend>{{dado.author}}</legend>
             </article>
+        {% endfor %}
 
-            <article id="espaguete.png">
-                <img src="./assets/espaguete.png" alt="Espaguete ao alho">
-                <p>Espaguete ao alho</p>
-                <legend>por Júlia Kinoto</legend>
+        {% for dado in dados %}
+            <article class="articles-index">
+                <img src="{{dado.image}}" alt="{{dado.title}}">
+                <p>{{dado.title}}</p>
+                <legend>{{dado.author}}</legend>
             </article>
-
-            <article id="lasanha.png">
-                <img src="./assets/lasanha.png" alt="Lasanha mac n' cheese">
-                <p>Lasanha mac n' cheese</p>
-                <legend>por Juliano Vieira</legend>
-            </article>
-
-            <article id="doce.png">
-                <img src="./assets/doce.png" alt="Docinhos pão-do-céu">
-                <p>Docinhos pão-do-céu</p>
-                <legend>por Ricardo Golvea</legend>
-            </article>
-
-            <article id="asinhas.png">
-                <img src="./assets/asinhas.png" alt="Asinhas de frango ao barbecue">
-                <p>Asinhas de frango ao barbecue</p>
-                <legend>por Vania Steroski</legend>
-            </article>
-         </div>
-     </section>
-    
-    </div>
-
+        {% endfor %}
+        </div>
+    </section>
     <div class="modal-overlay">
         <div class="modal">
             <div class="modal-content">
@@ -109,11 +37,11 @@
            
         </div>
     </div>
+{% endblock %}
 
-    <footer>
-        <p>Todos direitos revervados, receitas Foodfy</p>
-    </footer>
 
-    <script src="./js/scripts.js"></script>
-</body>
-</html>
+    
+
+    
+
+

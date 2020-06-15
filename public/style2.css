@@ -5,11 +5,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
 .container{
-    width: 940px;
+    width: 53%;
     margin: 0 auto;
-    border: 5px solid blue;
 }
 
 /* header */
@@ -34,7 +32,7 @@ header ul{
 }
 
 header h1{
-    background: url('./assets/logo.png') no-repeat;
+    background: url('./assets/logo.png')  no-repeat;
     text-indent: -9999px;
     text-align: center;
 }
@@ -83,10 +81,13 @@ header h1{
     line-height: 28px;
     margin-bottom: 20px;
 }
+
+
 /* section */
 section{
     margin-top: 50px;
 }
+
 .sect-content{
     margin-top: 20px;
     display: grid;
@@ -95,7 +96,7 @@ section{
     grid-row-gap: 30px;
 }
 
-.sect-content img{
+.sect-content .articles-index img{
     width: 100%;
     border-radius: 15px;
 
