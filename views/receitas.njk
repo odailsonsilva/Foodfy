@@ -8,7 +8,8 @@
     <section>
        <div class="sect-content">
         {% for dado in dados %}
-            <article class="articles-index">
+
+            <article class="articles-index" id="{{dado.id}}">
                 <img src="{{dado.image}}" alt="{{dado.title}}">
                 <p>{{dado.title}}</p>
                 <legend>{{dado.author}}</legend>
@@ -24,19 +25,6 @@
         {% endfor %}
         </div>
     </section>
-    <div class="modal-overlay">
-        <div class="modal">
-            <div class="modal-content">
-                <img src="./assets/" alt="">
-                <h2></h2>
-                <p>por Vania Steroski</p>
-            </div>
-            <div class="modal-close">
-                Fechar modal
-            </div>
-           
-        </div>
-    </div>
 {% endblock %}
 
 
