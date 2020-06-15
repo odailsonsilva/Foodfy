@@ -5,9 +5,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
 .container{
     width: 940px;
     margin: 0 auto;
+    border: 5px solid blue;
 }
 
 /* header */
@@ -32,7 +34,7 @@ header ul{
 }
 
 header h1{
-    background: url('../assets/logo.png') no-repeat;
+    background: url('./assets/logo.png') no-repeat;
     text-indent: -9999px;
     text-align: center;
 }

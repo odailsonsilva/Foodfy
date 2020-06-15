@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Inicio - Foodfy</title>
+{% endblock %}
+
+{% block content %}
+    <main class="main-principal">
+        <div class="main-content">
+            <h1>As melhores receitas</h1>
+            <p>
+                Aprenda a construir os melhores pratos
+                com receitas criadas por profissionais
+                do mundo inteiro.
+            </p>
+        </div>
+        <img src="./assets/chef.png" alt="Chefinho">
+    </main>
+   
+    <section>
+       <h2>Mais acessadas</h2>
+       <div class="sect-content">
+        {% for dado in dados%}
+            <article>
+                <img src="{{dado.image}}" alt="{{dado.title}}">
+                <p>{{dado.title}}</p>
+                <legend>{{dado.author}}</legend>
+            </article>
+        {% endfor %}
+        </div>
+    </section>
+{% endblock %}

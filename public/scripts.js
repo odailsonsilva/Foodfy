@@ -1,3 +1,4 @@
+
 const articles = document.querySelectorAll('article')
 const modalOverlay = document.querySelector('.modal-overlay')
 const close = document.querySelector('.modal-close')
