@@ -1,0 +1,127 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto-Regular;
+}
+
+/* grid */
+.container{
+    max-width: 940px;
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-rows: 12vh 40vh 8vh 40vh 10vh;
+    grid-template-areas: ". h ." ". m ." ". s ." ". s ." ". f .";
+}
+
+header{
+    grid-area: h;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding-top: 5%;
+}
+
+main{
+    grid-area: m;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.main-content{
+    align-self: center;
+    margin-left: 10%;
+}
+
+main img{
+    align-self: flex-end;
+}
+
+section{
+    grid-area: s;
+}
+
+/* flex */
+.menu-principal ul{
+   display: flex;
+   line-height: 40px;
+}
+
+/* header */
+header a{
+    text-decoration: none;
+    color: #111;
+}
+a{
+    border: 1px solid blue
+}
+a h1{
+    background: url('../assets/logo.png' )  no-repeat;
+    text-indent: -9999px;
+    width: 150px;
+    height: 30px;
+    border: 1px solid red;
+}
+
+.menu-principal li{
+    list-style: none;
+    padding-left: 5%;
+}
+
+/* main */
+main{
+    background: #FBDFDB;
+    border-radius: 30px;
+}
+
+main  h1{
+    font-size: 2em;
+}
+
+main p{
+    opacity: 0.7;
+    font-size: 18px;
+    color: #000;
+    line-height: 28px;
+    width: 290px;
+    padding-top: 3% ;
+}
+
+/* section */
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid red;
+}
+
+
+
+
+
+section article{
+   
+} 
+
+section img{
+    width: 300px;
+    border-radius: 15px;
+}
+
+section p{
+    font-size: 18px;
+}
+
+section legend{
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* footer */
+footer{
+    background: #eee;
+    color: #999;
+    text-align: center;
+    font-size: center;   
+}

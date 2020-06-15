@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 940px;
+    margin: 0 auto;
+}
+
+/* header */
+header{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 31px;
+}
+
+header a{
+    text-decoration: none;
+    color: #111;
+}
+
+header li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header ul{
+    display: flex;
+}
+
+header h1{
+    background: url('../assets/logo.png') no-repeat;
+    text-indent: -9999px;
+    text-align: center;
+}
+
+/* main */
+.main-principal{
+    background: #fbdfdb;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    margin-top: 30px;
+    height: 366px;
+}
+
+.main-content{
+    width: 300px;
+    margin-left: 60px;
+}
+
+.main-principal img{
+    align-self: flex-end;
+}
+
+
+
+.main-content p{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 28px;
+    opacity: 0.7;
+    color: #000;
+}
+
+
+.main-sobre h3{
+    margin: 30px 0 20px;
+}
+
+.main-sobre h2{
+    margin: 50px 0 20px;
+}
+
+.main-sobre p{
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+/* section */
+section{
+    margin-top: 50px;
+}
+.sect-content{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.sect-content img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+article p{
+    margin: 20px 0 5px;
+    font-size: 18px;
+}
+
+article legend{
+    font-size: 14px;
+    color: #777;
+}
+
+.sect-content article img{
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    padding: 20px;
+    background: #eee;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+
+/* modal */
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    background: white;
+    width: 660px;
+    height: 413px;
+    position: relative;
+    margin: 25vh auto;
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.modal-content img{
+    border-radius: 15px;
+    width: 600px;
+    height: 200px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.modal-content p{
+    font-size: 18px;
+    margin-top: 5px;
+    color: #777;
+}
+
+
+.modal-close{
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    text-decoration: underline;
+}
+
+/* .modal-overlay.active */
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* pagina-ativa */
+body#body-receitas a#receitas,
+body#body-sobre a#sobre
+{
+    font-weight: bold;
+}
