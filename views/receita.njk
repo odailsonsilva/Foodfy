@@ -18,7 +18,7 @@
                 <h2>Ingredientes</h2>
                 <p class="btn-esconder">ESCONDER</p>
             </div>
-            <ul class="ul-ingredientes">
+            <ul class="ul-ingredientes div-animacao">
                 {% for ingredient in receita.ingredients %}
                 <li>{{ingredient}}</li>
                 {% endfor %}
@@ -28,10 +28,12 @@
        <div class="preparo-receita espacamento-divs">
             <div class="title-btn">
                 <h2>Modo de preparo</h2>
-                <p class="btn-esconder">MOSTRAR</p>
+                <p class="btn-esconder">ESCONDER</p>
             </div>
             {% for preparo in receita.preparation %}
-            <p class="paragrafo">{{preparo}}</p>
+            <div class="div-animacao">
+                <p class="paragrafo">{{preparo}}</p>
+            </div>
             {% endfor %}
         </div>
 
@@ -40,7 +42,9 @@
                 <h2>Informações adicionais</h2>
                 <p class="btn-esconder">ESCONDER</p>
             </div>
-            <p class="paragrafo">{{receita.information}}</p>
+            <div class="div-animacao">
+                <p class="paragrafo">{{receita.information}}</p>
+            </div>
         </div>  
 
     </section>

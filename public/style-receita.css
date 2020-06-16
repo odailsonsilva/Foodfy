@@ -53,3 +53,9 @@
     font-size: 18px;
     line-height: 28px;
 }
+
+/* alteçções btn-esconder */
+.alt{
+    visibility: hidden;
+    margin: -70px;
+}
