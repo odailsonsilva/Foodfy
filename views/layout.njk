@@ -9,15 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body>
+{% block body %}
+
+{% endblock %}
 <div class="container">
 
     <header>
         <a href="/"><h1>Foodfy</h1></a>
         <nav class="menu-principal">
             <ul>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="/receitas">Receitas</a></li>
+                <li><a href="/sobre" id="sobre">Sobre</a></li>
+                <li><a href="/receitas" id="receitas">Receitas</a></li>
             </ul>
         </nav>
     </header>

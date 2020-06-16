@@ -4,6 +4,10 @@
     <title>Receitas - Foodfy</title>
 {% endblock %}
 
+{% block body %}
+<body id="body-receitas">
+{% endblock %}
+
 {% block content %}
     <section>
        <div class="sect-content">
@@ -17,7 +21,8 @@
         {% endfor %}
 
         {% for dado in dados %}
-            <article class="articles-index">
+
+            <article class="articles-index" id="{{dado.id}}">
                 <img src="{{dado.image}}" alt="{{dado.title}}">
                 <p>{{dado.title}}</p>
                 <legend>{{dado.author}}</legend>
