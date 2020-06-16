@@ -44,5 +44,6 @@ server.get('/receita', function(req, res){ //QUERY PARM
     res.render("receita", { receita })
 })
 
+
 // porta para o servidor
 server.listen(5000)

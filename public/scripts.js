@@ -1,10 +1,5 @@
-
 const articles = document.querySelectorAll('article')
-const btnEsconder = document.querySelectorAll('.btn-esconder')
-
-// funcoes para esconder btn-esconder
-
-
+const btnME = document.querySelector('.btn-esconder')
 // funcoes para mandar de receitas -> receita
 
 for(let article of articles){
@@ -14,30 +9,14 @@ for(let article of articles){
     })
 }
 
-for(let btn of btnEsconder){
-    btn.addEventListener("click", function(){
-        const divAnimacao = document.querySelector(".div-animacao")
-    
-        if(btn.innerHTML == "MOSTRAR" ){
-            btn.innerHTML = "ESCONDER" 
-            divAnimacao.classList.remove("alt")
-        }else if(btn.innerHTML == "ESCONDER"){
-            btn.innerHTML = "MOSTRAR" 
-            divAnimacao.classList.add("alt")
-        }
-    })
+// funcoes para esconder btn-esconder
+function btnMostrar(id, btn){
+    if(document.getElementById(id).style.display == 'none'){
+        document.getElementById(id).style.display = 'block'
+        document.getElementById(btn).innerHTML = "ESCONDER"
+
+    }else{
+        document.getElementById(id).style.display = 'none'
+        document.getElementById(btn).innerHTML = "MOSTRAR"
+    }
 }
-
-
-
-// btnEsconder.addEventListener("click", function(){
-//     const divAnimacao = document.querySelector(".div-animacao")
-
-//     if(btnEsconder.innerHTML == "MOSTRAR" ){
-//         btnEsconder.innerHTML = "ESCONDER" 
-//         divAnimacao.classList.remove("alt")
-//     }else if(btnEsconder.innerHTML == "ESCONDER"){
-//         btnEsconder.innerHTML = "MOSTRAR" 
-//         divAnimacao.classList.add("alt")
-//     }
-// })

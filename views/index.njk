@@ -21,7 +21,7 @@
        <h2>Mais acessadas</h2>
        <div class="sect-content">
         {% for dado in dados %}
-            <article class="articles-index">
+            <article class="articles-index" id="{{dado.id}}">
                 <img src="{{dado.image}}" alt="{{dado.title}}">
                 <p>{{dado.title}}</p>
                 <legend>{{dado.author}}</legend>
