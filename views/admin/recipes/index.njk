@@ -1,0 +1,36 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <title>Receitas - Foodfy</title>
+    <link rel="stylesheet" href="/adm-index.css">
+{% endblock %}
+
+{% block body %}
+<body id="body-receitas">
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Gerenciar receitas</h2>
+       <div class="sect-content-adm">
+        {% for dado in dados.recipes %}
+                <article class="articles-index" id="{{dado.id}}">
+                    <img src="{{dado.imgRecipe2 }}" alt="{{dado.title}}">
+                    <div class="props-articles">
+                        <p>{{dado.title}}</p>
+                        <legend class="espaca" >{{dado.author}}</legend>
+                        <a href="/admin/recipes/{{dado.id}}">Visualizar</a>
+                    </div>
+                </article>
+            </a>
+        {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+
+    
+
+    
+
+

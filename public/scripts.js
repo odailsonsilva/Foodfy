@@ -1,15 +1,5 @@
-const articles = document.querySelectorAll('article')
-const btnME = document.querySelector('.btn-esconder')
-// funcoes para mandar de receitas -> receita
-
-for(let article of articles){
-    article.addEventListener("click", function(){
-        const receitaID = article.getAttribute("id")
-        window.location.href = `/receita?id=${receitaID}`
-    })
-}
-
 // funcoes para esconder btn-esconder
+const btnME = document.querySelector('.btn-esconder')
 function btnMostrar(id, btn){
     if(document.getElementById(id).style.display == 'none'){
         document.getElementById(id).style.display = 'block'
@@ -19,4 +9,14 @@ function btnMostrar(id, btn){
         document.getElementById(id).style.display = 'none'
         document.getElementById(btn).innerHTML = "MOSTRAR"
     }
+}
+
+//funcao deixar ativo pg atual
+const paginaAtual = location.pathname
+const menuitems  = document.querySelectorAll(".menu-principal .links a")
+
+for(item of menuitems) {
+  if(paginaAtual.includes(item.getAttribute("href"))){
+    item.classList.add("active")
+  }
 }

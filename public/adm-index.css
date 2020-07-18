@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+header.admin-header{
+  background-color: black;
+  margin: 0;
+  width: 100%;
+  align-items: center;
+}
+
+header.admin-header h1.admin-h1{
+  margin: 25px 0 25px 300px;
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.sect-content-adm{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+
+.sect-content-adm .articles-index img{
+  width: 100%;
+  border-radius: 15px;
+}
+
+article{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.sect-content-adm article p{
+  margin: 0;
+  font-size: 16px;
+}
+
+article legend{
+  font-size: 14px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.props-articles{
+  margin-left: 20px;
+}
+
+.props-articles a{
+  text-decoration: none;
+  color: #6558C3;
+}
+
+.props-articles p{
+  font-size: 16px;
+}
+
+/*configuracao SHOW*/
+.header-btn{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 24px;
+}
+
+.header-btn button,.header-btn a{
+  background-color: #6558C3;
+  background-size: cover;
+  color: white;
+  border-radius: 4px;
+  padding: 6px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  justify-self: end;
+  font-size: 14px;
+  display: block;
+}
+
+.header-btn div.btns form:first-child button.deletar{
+  background-color: #DC4747;
+  margin-right: 10px;
+}
+
+/* .header-btn div.btns button{
+  width: 50%;
+} */
+
+.header-btn div.btns{
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+/*formularios*/
+.ele-fomr  label{
+  display: block;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.ele-fomr  textarea, input{
+  width: 100%;
+  padding: 15px 20px;
+  color: #111;
+}
+
+.ele-fomr  input{
+  height: 48px;
+}
+
+.ele-fomr  textarea{
+  height: 258px;
+}
+
+.ele-fomr  button{
+  color: #6558C3;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+  border: none;
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ele-fomr {
+  margin-bottom: 30px;
+}

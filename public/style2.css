@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -32,7 +33,7 @@ header ul{
     display: flex;
 }
 
-header h1{
+body#todos header h1{
     background: url('./assets/logo.png')  no-repeat;
     text-indent: -9999px;
     text-align: center;
@@ -127,10 +128,12 @@ footer{
     text-align: center;
 }
 
-
-/* pagina-ativa */
-body#body-receitas a#receitas,
-body#body-sobre a#sobre
-{
+/*links - receita ir pra show*/
+.st-receita{
+    text-decoration: none;
+    color: #000;
+}
+/*pg ativa*/
+.active{
     font-weight: bold;
 }

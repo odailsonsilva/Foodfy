@@ -20,12 +20,14 @@
     <section>
        <h2>Mais acessadas</h2>
        <div class="sect-content">
-        {% for dado in dados %}
-            <article class="articles-index" id="{{dado.id}}">
-                <img src="{{dado.image}}" alt="{{dado.title}}">
+        {% for dado in dados.recipes %}
+            <a class="st-receita" href="/receita/{{dado.id}}">
+            <article class="articles-index">
+                <img src="{{dado.imgRecipe}}" alt="{{dado.title}}">
                 <p>{{dado.title}}</p>
                 <legend>{{dado.author}}</legend>
             </article>
+            </a>
         {% endfor %}
         </div>
     </section>

@@ -5,28 +5,30 @@
 {% endblock %}
 
 {% block body %}
-<body id="body-receitas">
 {% endblock %}
 
 {% block content %}
     <section>
        <div class="sect-content">
-        {% for dado in dados %}
-
-            <article class="articles-index" id="{{dado.id}}">
-                <img src="{{dado.image}}" alt="{{dado.title}}">
-                <p>{{dado.title}}</p>
-                <legend>{{dado.author}}</legend>
-            </article>
+        {% for dado in dados.recipes %}
+            <a class="st-receita" href="receita/{{dado.id}}">
+                <article class="articles-index" id="{{dado.id}}">
+                    <img src="{{dado.imgRecipe }}" alt="{{dado.title}}">
+                    <p>{{dado.title}}</p>
+                    <legend>{{dado.author}}</legend>
+                </article>
+            </a>
         {% endfor %}
 
         {% for dado in dados %}
 
-            <article class="articles-index" id="{{dado.id}}">
-                <img src="{{dado.image}}" alt="{{dado.title}}">
-                <p>{{dado.title}}</p>
-                <legend>{{dado.author}}</legend>
-            </article>
+           <a class="st-receita" href="receita/{{dado.id}}">
+                <article class="articles-index" id="{{dado.id}}">
+                    <img src="{{dado.image2 }}" alt="{{dado.title}}">
+                    <p>{{dado.title}}</p>
+                    <legend>{{dado.author}}</legend>
+                </article>
+            </a>
         {% endfor %}
         </div>
     </section>
