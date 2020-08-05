@@ -1,0 +1,98 @@
+
+
+    <div class="ele-fomr">
+      <label for="imgRecipe">Imagem da receita</label>
+      <input
+      type="text"
+       name="imgRecipe" 
+       value="{{receita.image}}" 
+       id="imgRecipe"/>
+    </div> 
+
+   <div class="ele-fomr">
+      <label for="chefSelect">Chef</label>
+      <select name="chefSelect" > 
+         <option>Selecione um Chef</option>
+         {%for chef in option%}
+         <option value="{{chef.id}}"
+         {%if receita.chef_id == chef.id %}
+            selected
+         {%endif%}
+         >{{chef.name}}</option>
+         {%endfor%}
+      </select>
+   </div>
+
+   <div class="ele-fomr">
+      <div  class="ingredientes">
+         <label for="ingredientesLabel">Ingredientes</label>
+         <div class="ingrediente">
+            <input
+            type="text"
+            name="ingredientes[]" 
+            value="{{receita.ingredients}}" 
+            id="ingredientesLabel"/>
+         </div>
+      </div>
+      <button type="button" class="add-ingrediente">Adicionar novo ingrediente</button>
+    </div>
+
+    <div class="ele-fomr">
+      <div  class="modoPreparoDiv">
+         <label for="modoPreparoLabel">Modo de preparo</label>
+         <div class="modoPreparo">
+            <input
+            type="text"
+            name="modoPreparo[]" 
+            value="{{receita.preparation}}" 
+            id="modoPreparoLabel"/>
+         </div>
+      </div>
+      <button type="button" class="add-passo">Adicionar novo passo</button>
+    </div>
+
+    <div class="ele-fomr">
+       <label for="infAdd">Informações adicionais</label>
+       <textarea
+       name="infAdd" 
+       id="infAdd">{{receita.information}}</textarea>
+    </div>
+
+   <script>
+      function addIngrediente() {
+         const ingredientes = document.querySelector(".ingredientes");
+         const containerFilho = document.querySelectorAll(".ingrediente");
+
+         // Realiza um clone do último ingrediente adicionado
+         const newField = containerFilho[containerFilho.length - 1].cloneNode(true);
+
+         // Não adiciona um novo input se o último tem um valor vazio
+         if (newField.children[0].value == "") return false;
+
+         // Deixa o valor do input vazio
+         newField.children[0].value = "";
+         ingredientes.appendChild(newField);
+      }
+
+      ///function addPasso
+      function addPasso() {
+         const ingredientes = document.querySelector(".modoPreparoDiv");
+         const containerFilho = document.querySelectorAll(".modoPreparo");
+
+         // Realiza um clone do último ingrediente adicionado
+         const newField = containerFilho[containerFilho.length - 1].cloneNode(true);
+
+         // Não adiciona um novo input se o último tem um valor vazio
+         if (newField.children[0].value == "") return false;
+
+         // Deixa o valor do input vazio
+         newField.children[0].value = "";
+         ingredientes.appendChild(newField);
+      }
+
+      document.querySelector(".add-ingrediente").addEventListener("click", addIngrediente);
+      document.querySelector(".add-passo").addEventListener("click", addPasso);
+   </script>
+
+
+

@@ -1,8 +1,17 @@
-{% extends "layout.njk" %}
+{% extends "site/layout.njk" %}
 
 {% block head %}
     <title>Inicio - Foodfy</title>
 {% endblock %}
+
+{%block filter%}
+    <div class="filterSite">
+            <form action="/busca" method="GET">
+                <input type="text" name="filter" placeholder="Buscar uma receita">
+                <button type="submit" >Buscar</button>
+            </form>
+        </div>
+{%endblock%}
 
 {% block content %}
     <main class="main-principal">

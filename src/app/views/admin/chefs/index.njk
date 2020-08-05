@@ -1,0 +1,44 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <title>Receitas - Foodfy</title>
+    <link rel="stylesheet" href="/adm-index.css">
+{% endblock %}
+
+{% block body %}
+<body id="body-receitas">
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Gerenciar chefs</h2>
+
+        <div  class="sectionChefs">
+        {%for chef in chefs%}
+        <article >
+          <img src="{{chef.avatar_url}}">
+          <div class="infoChef props-articles">
+            <p>{{chef.name}}</p>
+            <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+          </div>
+        </article>
+        {%endfor%}
+
+      
+        </div>
+
+        <div class="pagination"
+          data-pages={{pagination.pages}}
+          data-total={{pagination.total}}
+          data-filter={{filter}}
+        ></div>
+
+    </section>
+{% endblock %}
+
+
+    
+
+    
+
+

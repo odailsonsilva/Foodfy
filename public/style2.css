@@ -6,8 +6,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html, body{
+    height: 100vh;
+}
+
 .container{
-    width: 53%;
+    min-height: 100vh;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -15,8 +20,9 @@
 /* header */
 header{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 130px 1fr 300px;
     margin-top: 31px;
+    align-items: center;
 }
 
 header a{
@@ -37,6 +43,37 @@ body#todos header h1{
     background: url('./assets/logo.png')  no-repeat;
     text-indent: -9999px;
     text-align: center;
+}
+
+/*filtro - site/layout */
+header .filterSite form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px;
+}
+
+header .filterSite form{
+    display: grid;
+    grid-template-columns: 2fr 50px;
+    grid-gap: 8px;
+    justify-items: end;
+}
+
+header .filterSite form input{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+}
+
+header .filterSite form button{
+    width: 50px;
+    padding: 4px;
+    border: none;
+    background-color: #6558C3;
+    font-size: 14px;
+    color: white;
+    border-radius: 4px;
 }
 
 /* main */
@@ -137,3 +174,33 @@ footer{
 .active{
     font-weight: bold;
 }
+
+/*SITE/CHEFS estilizacao*/
+.sectionChefs{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);  
+ grid-gap: 30px; 
+}
+
+.sectionChefs article{
+    display: flex;
+    padding: 8px;
+   
+}
+
+.sectionChefs article img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+.sectionChefs article .infoChef{
+    margin: 0 0 0 15px;
+}
+
+.sectionChefs article .infoChef p,
+.sectionChefs article .infoChef legend{
+    margin: 0;
+    padding: 2px;
+}
+
+

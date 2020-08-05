@@ -8,13 +8,13 @@
 {% block content %}
      <section>
         <div class="header-btn">
-            <h2>Receita:{{receita.title}}</h2>
-            <a href="/admin/recipes/{{receita.id}}/edit">Editar</a>
+            <h2>Receita:{{recipe.title}}</h2>
+            <a href="/admin/recipes/{{recipe.id}}/edit">Editar</a>
         </div>
         <div class="header-receita espacamento-divs">
-            <img src="{{receita.imgRecipe2}}" alt="{{receita.title}}">
-            <h1>{{receita.title}}</h1>
-            <p>{{receita.author}}</p>
+            <img src="{{recipe.image}}" alt="{{recipe.title}}">
+            <h1>{{recipe.title}}</h1>
+            <p>{{recipe.author}}</p>
         </div>
 
         <div>
@@ -22,7 +22,7 @@
                 <h2>Ingredientes</h2>
             </div>
             <ul class="ul-ingredientes alt" id="ing" >
-                {% for ingredient in receita.ingredientes %}
+                {% for ingredient in recipe.ingredients %}
                 <li>{{ingredient}}</li>
                 {% endfor %}
             </ul>
@@ -33,7 +33,7 @@
                 <h2>Modo de preparo</h2>
             </div>
             <div  id="prep" class="alt">
-            {% for preparo in receita.modoPreparo%}
+            {% for preparo in recipe.preparation%}
                 <p class="paragrafo">{{preparo}}</p>        
             {% endfor %}
             </div>
@@ -44,7 +44,7 @@
                 <h2>Informações adicionais</h2>
             </div>
             <div class="alt" id="inf"> 
-                <p class="paragrafo">{{receita.infAdd}}</p>
+                <p class="paragrafo">{{recipe.information}}</p>
             </div>
         </div>  
 

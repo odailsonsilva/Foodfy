@@ -13,12 +13,12 @@
     <section>
         <h2>Gerenciar receitas</h2>
        <div class="sect-content-adm">
-        {% for dado in dados.recipes %}
+        {% for dado in recipes %}
                 <article class="articles-index" id="{{dado.id}}">
-                    <img src="{{dado.imgRecipe2 }}" alt="{{dado.title}}">
+                    <img src="{{dado.image }}" alt="{{dado.title}}">
                     <div class="props-articles">
                         <p>{{dado.title}}</p>
-                        <legend class="espaca" >{{dado.author}}</legend>
+                        <legend class="espaca" >ODAILSON autor</legend>
                         <a href="/admin/recipes/{{dado.id}}">Visualizar</a>
                     </div>
                 </article>

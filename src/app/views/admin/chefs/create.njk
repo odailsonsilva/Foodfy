@@ -1,0 +1,33 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <title>Receitas - Foodfy</title>
+    <link rel="stylesheet" href="/adm-index.css">
+{% endblock %}
+
+{% block body %}
+<body id="body-receitas">
+{% endblock %}
+
+{% block content %}
+    <section>
+     <form action="/admin/chefs" method="POST">
+      <div class="header-btn">
+        <h2>Criando chef</h2>
+        <button type="submit">Salvar chef</button>
+      </div>
+   
+       <div class="forms">
+        
+         {% include "admin/chefs/fields.njk" %}
+        </form>
+        </div>
+    </section>
+{% endblock %}
+
+
+    
+
+    
+
+

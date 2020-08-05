@@ -1,0 +1,43 @@
+{% extends "site/layout.njk" %}
+
+
+{% block head %}
+    <title>Receitas - Foodfy</title>
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{%block filter%}
+    <div class="filterSite">
+            <form action="/busca" method="GET">
+                <input type="text" name="filter" placeholder="Buscar uma receita">
+                <button type="submit" >Buscar</button>
+            </form>
+        </div>
+{%endblock%}
+
+{% block content %}
+   
+    <section>
+     <h1>Buscando por "{{filter}}"</h1>
+       <div class="sect-content">
+        {% for dado in dados.recipes %}
+            <a class="st-receita" href="receita/{{dado.id}}">
+                <article class="articles-index" id="{{dado.id}}">
+                    <img src="{{dado.imgRecipe }}" alt="{{dado.title}}">
+                    <p>{{dado.title}}</p>
+                    <legend>{{dado.author}}</legend>
+                </article>
+            </a>
+        {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+
+    
+
+    
+
+
